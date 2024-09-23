@@ -1,0 +1,66 @@
+/* Jacket */
+.jacket {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.jacket img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jacket-info {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.jacket-text,
+.jacket-price {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.jacket-text h1,
+.jacket-price p:first-child {
+  font-size: 2.5rem;
+}
+
+.jacket-price {
+  text-align: right;
+}
+
+.jacket-price p:last-of-type {
+  text-decoration-line: line-through;
+}
+
+.description,
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-details {
+  margin-top: 1rem;
+}
+
+.product-details li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.product-details span {
+  font-weight: 700;
+}
+
+.similar {
+  margin: 4rem 1rem 1rem;
+}
+
+.back-to-shop {
+  margin: 2rem 1rem;
+}

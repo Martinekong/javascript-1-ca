@@ -8,6 +8,11 @@
   list-style-type: none;
 }
 
+body {
+  background-color: white;
+}
+
+/*check other images ...*/
 .shop-grid img,
 footer img {
   width: 100%;
@@ -32,7 +37,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-p, a, label, input {
+p, a, label, input, li {
   font-family: "inter";
 }
 
@@ -91,139 +96,52 @@ header {
   font-size: 1.2rem;
 }
 
-
-/* HERO */
-.shop-female,
-.shop-male {
-  position: relative;
-}
-
-.hero-text {
-  position: absolute;
-  font-family: "roboto";
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
   color: white;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.season {
-  top: .5rem;
-  font-weight: 700;
-  font-size: clamp(3rem, 10vw, 5rem); /*works up to desktop*/
-  opacity: .6;
-  width: 100%;
-}
-
-.browse {
-  bottom: 10rem;
-  font-size: 2rem;
-  width: 100%;
-}
-
-.heading {
-  font-size: 3rem;
-  font-weight: 800;
-  bottom: 3.3rem;
-  max-width: 210px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.shop-female img,
-.shop-male img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 600px) {
-  .browse {
-    bottom: 19rem;
-  }
-
-  .heading {
-    font-size: 5rem;
-    max-width: 350px;
-    bottom: 8rem;
-  }
-}
-
-@media screen and (max-width: 899px) {
-  .hero {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .shop-female,
-  .shop-male {
-    scroll-snap-align: start;
-    min-width: 100vw;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .season {
-    font-size: 4rem;
-  }
-
-  .browse {
-    bottom: 13rem;
-  }
-
-  .heading {
-    bottom: 2rem;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .season {
-    font-size: 6rem;
-  }
-
-  .browse {
-    bottom: 20rem;
-  }
-
-  .heading {
-    bottom: 8rem;
-  }
-}
-
-
-/* SHOP */
-.shop h1 {
-  text-transform: uppercase;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-
-/* FILTER BUTTON */
-.filter {
-  margin: 0 1rem 2rem;
-}
-
-.filter button {
+  padding: 2rem;
   display: flex;
-  gap: 1rem;
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+} /*change display property larger screens?*/
+
+footer img {
+  max-width: 300px;
 }
+
+.footer-nav p {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-nav a {
+  color: white;
+  text-transform: capitalize;
+}
+
+.fa-check {
+  background-color: var(--secondary-color);
+  padding: .5rem .8rem;
+}
+
+.footer-newsletter-flex {
+  display: flex;
+  margin-top: 1rem;
+}
+
+#footer-newsletter-input {
+  padding-left: 1rem;
+  width: 100%;
+  background-color: white;
+} /*change for larger screens?*/
 
 
 /* JACKET CARDS */
@@ -289,49 +207,26 @@ header {
 }
 
 
-/* FOOTER */
-footer {
+/* BUTTONS */
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.primary-btn {
   background-color: var(--primary-color);
   color: white;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-} /*change display property larger screens?*/
-
-footer img {
-  max-width: 300px;
+  text-transform: uppercase;
 }
 
-.footer-nav p {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.footer-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.footer-nav a {
-  color: white;
-  text-transform: capitalize;
-}
-
-.fa-check {
+.secondary-btn {
   background-color: var(--secondary-color);
-  padding: .5rem .8rem;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  gap: 2rem;
 }
-
-.footer-newsletter-flex {
-  display: flex;
-  margin-top: 1rem;
-}
-
-#footer-newsletter-input {
-  padding-left: 1rem;
-  width: 100%;
-  background-color: white;
-} /*change for larger screens?*/
