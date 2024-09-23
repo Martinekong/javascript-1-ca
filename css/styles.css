@@ -28,8 +28,67 @@ h1, h2 {
   font-family: "roboto";
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 p, a, label, input {
   font-family: "inter";
+}
+
+
+/* HEADER */
+header {
+  margin: 2rem 1rem;
+  color: var(--primary-color);
+}
+
+.header-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header-logo {
+  font-family: "roboto";
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-end {
+  display: flex;
+}
+
+.fa-bars,
+.fa-magnifying-glass {
+  padding: 1rem 1.5rem;
+}
+
+.fa-bars {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.fa-magnifying-glass {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+#header-search {
+  background-color: #DEE9F3;
+  width: 100%;
+  padding-right: 1rem;
+  text-align: right;
+  font-size: 1.2rem;
 }
 
 
@@ -77,6 +136,18 @@ p, a, label, input {
   object-fit: cover;
 }
 
+@media screen and (min-width: 600px) {
+  .browse {
+    bottom: 19rem;
+  }
+
+  .heading {
+    font-size: 5rem;
+    max-width: 350px;
+    bottom: 8rem;
+  }
+}
+
 @media screen and (max-width: 899px) {
   .hero {
     display: flex;
@@ -93,19 +164,53 @@ p, a, label, input {
   }
 }
 
-
 @media screen and (min-width: 900px) {
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
+  .season {
+    font-size: 4rem;
+  }
+
+  .browse {
+    bottom: 13rem;
+  }
+
+  .heading {
+    bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .season {
+    font-size: 6rem;
+  }
+
+  .browse {
+    bottom: 20rem;
+  }
+
+  .heading {
+    bottom: 8rem;
+  }
+}
+
+
+/* SHOP */
+.shop h1 {
+  text-transform: uppercase;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 
 /* FILTER BUTTON */
 .filter {
-  margin: 2rem 1rem;
+  margin: 0 1rem 2rem;
 }
 
 .filter button {
@@ -144,7 +249,7 @@ p, a, label, input {
   bottom: .5rem;
 }
 
-.fa-bag-shopping {
+.shop-grid .fa-bag-shopping {
   padding: .5rem .625rem;
   background-color: rgba(255, 255, 255, .7);
   border-radius: 6px;
