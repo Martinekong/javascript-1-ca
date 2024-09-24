@@ -37,3 +37,27 @@
     grid-column: span 2;
   }
 }
+
+
+/* DOCUMENTS */
+.documents-container {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.documents-container h1,
+.documents-container h2 {
+  margin: 0;
+}
+
+.documents-container span {
+  font-weight: 700;
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
