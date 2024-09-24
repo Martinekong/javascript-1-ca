@@ -39,6 +39,79 @@
 }
 
 
+/* CONTACT */
+.contact {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact h1 {
+  margin-left: 0
+}
+
+.contact-information {
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+.contact-information div {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  align-items: center;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message form {
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message form label {
+  display: none;
+}
+
+.message form input {
+  padding: 1.5rem;
+  border: 1px solid var(--primary-color);
+  font-size: .8rem;
+}
+
+.full-name {
+  display: flex;
+  width: 100%;
+}
+
+.full-name input {
+  width: 50%;
+}
+
+.message form input#email,
+.message form input#subject {
+  width: 100%;
+}
+
+.message form textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1.5rem;
+  font-size: .8rem;
+}
+
+
+
 /* DOCUMENTS */
 .documents-container {
   margin: 0 1rem;

@@ -44,7 +44,7 @@ h2 {
   margin-top: 1rem;
 }
 
-p, a, label, input, li {
+p, a, label, input, li, textarea {
   font-family: "inter";
 }
 
@@ -100,7 +100,7 @@ header {
 }
 
 #header-search {
-  background-color: #DEE9F3;
+  background-color: var(--tertiary-color);
   width: 100%;
   padding-right: 1rem;
   text-align: right;
