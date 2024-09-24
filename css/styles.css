@@ -148,6 +148,12 @@ footer img {
 } /*change for larger screens?*/
 
 
+/* H1 HEADER ON MOST PAGES */
+.page-header {
+  text-transform: uppercase;
+  margin: 0 1rem 2rem;
+}
+
 /* JACKET CARDS */
 .shop-grid {
   display: grid;
@@ -234,4 +240,13 @@ footer img {
   color: var(--primary-color);
   text-transform: capitalize;
   gap: 2rem;
+}
+
+/* FILTER BUTTONS */
+.filter {
+  margin: 0 1rem 2rem;
+}
+
+.filter button {
+  text-transform: uppercase;
 }
