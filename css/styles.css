@@ -51,7 +51,7 @@ p, a, label, input, li, textarea {
 
 /* HEADER */
 header {
-  margin: 2rem 1rem 3rem;
+  margin: 2rem 1rem 2rem;
   color: var(--primary-color);
 }
 
@@ -219,6 +219,10 @@ footer a {
   .shop-grid {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .shop-btn {
+    grid-column: span 2;
+  }
 }
 
 
@@ -248,9 +252,37 @@ footer a {
 
 /* FILTER BUTTONS */
 .filter {
-  margin: 0 1rem 2rem;
+  margin: 0 1rem 1rem;
 }
 
 .filter button {
   text-transform: uppercase;
+}
+
+
+/* BREADCRUMBS */
+.breadcrumb {
+  display: flex;
+  padding: 0;
+  margin: 0 1rem 1rem;
+}
+
+.breadcrumb li {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
 }
