@@ -149,6 +149,7 @@ footer img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin: 0 1rem;
 }
 
 .card {
@@ -177,7 +178,7 @@ footer img {
 .text {
   display: flex;
   justify-content: space-between;
-  padding: .5rem;
+  padding: .5rem 0;
   color: var(--primary-color);
 }
 
