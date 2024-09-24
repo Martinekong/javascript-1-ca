@@ -6,6 +6,11 @@
   margin: 0 1rem;
 }
 
+.jacket h1 {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
 .jacket img {
   width: 100%;
   height: 100%;

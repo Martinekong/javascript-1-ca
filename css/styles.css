@@ -35,6 +35,9 @@ h1, h2 {
 
 h1 {
   font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 p, a, label, input, li {
@@ -44,7 +47,7 @@ p, a, label, input, li {
 
 /* HEADER */
 header {
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 3rem;
   color: var(--primary-color);
 }
 
@@ -147,12 +150,6 @@ footer img {
   background-color: white;
 } /*change for larger screens?*/
 
-
-/* H1 HEADER ON MOST PAGES */
-.page-header {
-  text-transform: uppercase;
-  margin: 0 1rem 2rem;
-}
 
 /* JACKET CARDS */
 .shop-grid {
