@@ -55,6 +55,10 @@ header {
   margin-bottom: 1rem;
 }
 
+.header-start .fa-bag-shopping {
+  padding-right: 1.5rem;
+}
+
 .header-logo {
   font-family: "roboto";
   font-weight: 600;
