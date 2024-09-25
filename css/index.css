@@ -35,6 +35,16 @@
   transform: translateX(-50%);
 }
 
+.hero-circles {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+
 .shop-female img,
 .shop-male img {
   height: 100%;
@@ -87,6 +97,10 @@
 
   .heading {
     bottom: 2rem;
+  }
+
+  .hero-circles {
+    display: none;
   }
 }
 
