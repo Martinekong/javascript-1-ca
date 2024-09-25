@@ -192,10 +192,14 @@
 
 .order-btn p {
   padding: .8rem 1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .order-btn button {
   padding: 0 .5rem;
+  color: var(--primary-color);
 }
 
 

@@ -143,6 +143,7 @@ footer a {
 .fa-check {
   background-color: var(--secondary-color);
   padding: .5rem .8rem;
+  color: var(--primary-color);
 }
 
 .footer-newsletter-flex {
