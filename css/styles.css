@@ -225,6 +225,15 @@ footer a {
   }
 }
 
+.similar {
+  margin: 4rem 1rem 1rem;
+  text-align: center;
+}
+
+.back-to-shop {
+  margin: 2rem 1rem;
+}
+
 
 /* BUTTONS */
 .primary-btn,
