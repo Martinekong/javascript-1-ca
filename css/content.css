@@ -73,6 +73,22 @@
   gap: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-text,
+  .contact .message {
+    grid-column: span 2;
+  }
+
+  .contact-information {
+    grid-row: span 3; 
+  }
+}
+
+
 /* FAQ */
 .faq {
   margin: 0 1rem;
@@ -126,7 +142,7 @@
 /* CHECKOUT */
 .checkout {
   margin-bottom: 2rem;
-  max-width: 1000px;
+  /* max-width: 1000px; */
 }
 
 .checkout h2 {
@@ -135,7 +151,7 @@
 
 .checkout-btn {
   margin: 0 1rem;
-  max-width: 968px;
+  /* max-width: 968px; */
 }
 
 .order-summary {
