@@ -46,6 +46,14 @@ h3, p, a, label, input, li, textarea {
   font-family: "inter";
 }
 
+label {
+  font-size: 1.1rem;
+}
+
+input, textarea {
+  font-size: 1rem;
+}
+
 
 /* HEADER */
 header {
