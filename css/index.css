@@ -106,8 +106,7 @@
 
 
 /* SHOP */
-.shop h1 {
-  margin-top: 4rem;
-  margin-left: 0;
+.shop {
+  margin-top: 3rem;
   text-align: center;
 }
