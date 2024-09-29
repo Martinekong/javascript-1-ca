@@ -3,7 +3,7 @@ const heroSection = document.querySelector("#hero");
 
 // HERO FEMALE
 const shopFemaleLink = document.createElement("a");
-shopFemaleLink.href = "shop-female.html";
+shopFemaleLink.href = "shop/shop-female.html";
 shopFemaleLink.classList.add("shop-female");
 
 const femaleImg = document.createElement("img");
@@ -47,7 +47,7 @@ heroSection.appendChild(shopFemaleLink);
 
 // HERO MALE
 const shopMaleLink = document.createElement("a");
-shopMaleLink.href = "shop-male.html";
+shopMaleLink.href = "shop/shop-male.html";
 shopMaleLink.classList.add("shop-male");
 
 const maleImg = document.createElement("img");
@@ -116,8 +116,8 @@ filterSection.appendChild(filterBtn);
 const shopGrid = document.querySelector("#shop-grid")
 
 const shopBtns = [
-  { href: "shop-male.html", label: "male" },
-  { href: "shop-female.html", label: "female" }
+  { href: "shop/shop-male.html", label: "male" },
+  { href: "shop/shop-female.html", label: "female" }
 ];
 
 shopBtns.forEach(button => {
@@ -135,7 +135,7 @@ shopBtns.forEach(button => {
 
 const allProducts = [
   {
-    href: "jackets/summit.html",
+    href: "shop/jackets/summit.html",
     imgSrc: "images/male-4.jpg",
     alt: "male wearing a brown jacket on a sunny day",
     name: "Summit",
@@ -143,7 +143,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/venture.html",
+    href: "shop/jackets/venture.html",
     imgSrc: "images/female-1.jpg",
     alt: "female wearing a green jacket holding a camera",
     name: "Venture",
@@ -151,7 +151,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/blizzard.html",
+    href: "shop/jackets/blizzard.html",
     imgSrc: "images/female-4.jpg",
     alt: "woman wearing a light blue winter jacket",
     name: "Blizzard",
@@ -159,7 +159,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/nimbus.html",
+    href: "shop/jackets/nimbus.html",
     imgSrc: "images/male-3.jpg",
     alt: "man wearing a brown jacket on a mountain",
     name: "Nimbus",
@@ -167,7 +167,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/blaze.html",
+    href: "shop/jackets/blaze.html",
     imgSrc: "images/male-1.jpg",
     alt: "male wearing an orange jacket on top of a mountain",
     name: "Blaze",
@@ -175,7 +175,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/explorer.html",
+    href: "shop/jackets/explorer.html",
     imgSrc: "images/female-2.jpg",
     alt: "female wearing a yellow jacket on a snowy mountain",
     name: "Explorer",
@@ -183,7 +183,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/ridge.html",
+    href: "shop/jackets/ridge.html",
     imgSrc: "images/female-3.jpg",
     alt: "female wearing an orange jacket and ski gear",
     name: "Ridge",
@@ -191,7 +191,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/trek.html",
+    href: "shop/jackets/trek.html",
     imgSrc: "images/male-2.jpg",
     alt: "male wearing a red jacket and a backpack",
     name: "Trek",
@@ -199,7 +199,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/horizon.html",
+    href: "shop/jackets/horizon.html",
     imgSrc: "images/male-5.jpg",
     alt: "male wearing a light brown winter jacket",
     name: "Horizon",
@@ -207,7 +207,7 @@ const allProducts = [
     oldPrice: "$149"
   },
   {
-    href: "jackets/cyclone.html",
+    href: "shop/jackets/cyclone.html",
     imgSrc: "images/female-5.jpg",
     alt: "woman wearing an orange jacket on a hike",
     name: "Cyclone",
