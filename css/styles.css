@@ -157,6 +157,7 @@ footer a {
 .footer-newsletter-flex {
   display: flex;
   margin-top: 1rem;
+  max-width: 720px;
 }
 
 #footer-newsletter-input {
@@ -164,9 +165,7 @@ footer a {
   width: 100%;
   background-color: white;
   border-radius: 0;
-} /*change for larger screens?*/
-
-
+}
 
 
 /* BUTTONS */
