@@ -85,3 +85,80 @@
     order: 3;
   }
 }
+
+
+/* JACKET CARDS */
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px auto;
+}
+
+.image {
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+}
+
+.shop-grid .fa-bag-shopping {
+  padding: .5rem .625rem;
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 6px;
+  color: var(--primary-color);
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+  color: var(--primary-color);
+}
+
+.name,
+.price {
+  font-weight: 700;
+}
+
+.old-price {
+  text-decoration-line: line-through;
+}
+
+.text div {
+  text-align: right;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+  grid-template-rows: 400px auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .shop-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .shop-btn {
+    grid-column: span 2;
+  }
+}
+
+.similar {
+  margin: 4rem 1rem 1rem;
+  text-align: center;
+}
+
+.back-to-shop {
+  margin: 2rem 1rem;
+}
