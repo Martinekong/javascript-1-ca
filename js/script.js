@@ -26,6 +26,7 @@ const hamburgerMenu = document.createElement("i");
 hamburgerMenu.classList.add("fa-solid", "fa-bars", "fa-2x");
 headerNavBtn.appendChild(hamburgerMenu);
 headerEnd.appendChild(headerNavBtn);
+//Need to make the nav menu
 
 const headerSearchLabel = document.createElement("label")
 headerSearchLabel.setAttribute("for", "header-search");
