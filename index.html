@@ -14,12 +14,54 @@
 </head>
 <body>
 
-  <header></header>
+  <header>
+    <div class="header-start">
+      <a href="/index.html" class="header-logo">rainydays.</a>
+      <i class="fa-solid fa-bag-shopping fa-2x"></i>
+    </div>
+
+    <div class="header-end">
+      <button>
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </button>
+      <label for="header-search"></label>
+      <input type="search" id="header-search" placeholder="search...">
+      <button>
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+      </button>
+    </div>
+  </header>
 
   <main>
 
-    <section id="hero"></section>
-    <section id="shop" class="page-header"></section>
+    <section id="hero">
+      <a class="shop-female" href="shop/shop-female.html">
+        <img src="images/female-2.jpg" alt="female wearing a yellow jacket on a snowy mountain">
+        <p class="hero-text season">season 2024</p>
+        <p class="hero-text browse">browse</p>
+        <p class="hero-text heading">female jackets</p>
+        <div class="hero-circles">
+          <i class="fa-solid fa-circle" aria-hidden="true"></i>
+          <i class="fa-regular fa-circle" aria-hidden="true"></i>
+        </div>
+      </a>
+
+      <a class="shop-male" href="shop/shop-male.html">
+        <img src="images/male-1.jpg" alt="male wearing an orange jacket on top of a mountain">
+        <p class="hero-text season">season 2024</p>
+        <p class="hero-text browse">browse</p>
+        <p class="hero-text heading">male jackets</p>
+        <div class="hero-circles">
+          <i class="fa-regular fa-circle" aria-hidden="true"></i>
+          <i class="fa-solid fa-circle" aria-hidden="true"></i>
+        </div>
+      </a>
+    </section>
+
+    <section id="shop" class="page-header">
+      <h1>shop our collection</h1>
+    </section>
+
     <section id="filter"></section>
     <section id="shop-grid"></section> 
 
