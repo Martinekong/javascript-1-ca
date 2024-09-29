@@ -226,7 +226,7 @@ const allProducts = [
 //   productsToDisplay = allProducts.slice(0, 4);
 // }
 
-allProducts.forEach(product => {
+function createProductCard(product) {
   const link = document.createElement("a");
   link.href = product.href;
 
@@ -270,5 +270,11 @@ allProducts.forEach(product => {
   textDiv.appendChild(priceDiv);
   card.appendChild(textDiv);
   link.appendChild(card);
-  shopGrid.appendChild(link);
+
+  return link;
+}
+
+allProducts.forEach(product => {
+  const productCard = createProductCard(product);
+  shopGrid.appendChild(productCard);
 });
