@@ -6,7 +6,7 @@ headerStart.classList.add("header-start");
 header.appendChild(headerStart);
 
 const headerLogo = document.createElement("a");
-headerLogo.href = "../index.html";
+headerLogo.href = "/index.html";
 headerLogo.classList.add("header-logo");
 headerLogo.textContent = "rainydays";
 headerStart.appendChild(headerLogo);
