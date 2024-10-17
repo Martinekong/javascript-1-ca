@@ -6,6 +6,7 @@ async function fetchJackets() {
     const response = await fetch(rainydaysApi);
     const { data: jackets } = await response.json();
     displayJackets(jackets)
+    console.log(jackets)
   } catch (error) {
     console.error("Error fetching jackets:", error)
   } finally {
@@ -21,7 +22,6 @@ function createElement(elementType, className = "") {
 
 function displayJackets(jackets) {
   const shopGrid = document.getElementById("shop-grid");
-  shopGrid.innerHTML = ""; // Clear previous content if any
 
   jackets.forEach((jacket) => {
     // Create card container
@@ -33,9 +33,17 @@ function displayJackets(jackets) {
     const img = createElement("img");
     img.src = jacket.image.url;
     img.alt = jacket.image.alt || jacket.title;
+    // The images doesnt have alt text ...
 
-    const addToCartButton = createElement("button", "add-to-cart");
+    const addToCartButton = createElement("button");
+    addToCartButton.setAttribute("id", "add-to-cart");
     addToCartButton.innerHTML = `<i class="fa-solid fa-bag-shopping fa-2x"></i>`;
+
+    addToCartButton.addEventListener("click", () => {
+      event.preventDefault();
+      cartCount++;
+      updateCartBadge();
+    });
 
     imgDiv.appendChild(img);
     imgDiv.appendChild(addToCartButton);
@@ -43,7 +51,7 @@ function displayJackets(jackets) {
     // Text container
     const textDiv = createElement("div", "text");
     const name = createElement("p", "name");
-    name.textContent = jacket.title;
+    name.textContent = jacket.title.replace(/^Rainy Days\s*/, "");
 
     const priceDiv = createElement("div");
     const price = createElement("p", "price");
@@ -69,3 +77,22 @@ function displayJackets(jackets) {
 }
 
 fetchJackets();
+
+
+const cartBadge = document.getElementById("cart-badge");
+let cartCount = 0;
+
+// Function to update the cart badge
+function updateCartBadge() {
+  cartBadge.textContent = cartCount;
+  cartBadge.style.display = cartCount > 0 ? "flex" : "none";
+}
+
+// Redirect to cart/checkout when clicking the cart button
+const cartBtn = document.getElementById("cart-btn");
+cartBtn.addEventListener("click", () => {
+  window.location.href = "checkout.html"; // Adjust the path as needed
+});
+
+// Initialize badge visibility on page load
+updateCartBadge();

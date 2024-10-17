@@ -112,6 +112,26 @@ header {
   border-radius: 0;
 }
 
+.cart-btn {
+  position: relative;
+}
+
+#cart-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 700;
+  display: none;
+}
 
 /* FOOTER */
 footer {
