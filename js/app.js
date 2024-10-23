@@ -1,5 +1,4 @@
-const API_BASE = `https://v2.api.noroff.dev`
-const rainydaysApi = `${API_BASE}/rainy-days`
+import { rainydaysApi } from "./constants.js";
 
 async function fetchJackets() {
   try {
@@ -26,7 +25,7 @@ function displayJackets(jackets) {
   jackets.forEach((jacket) => {
     // Create card container
     const card = createElement("a", "card");
-    card.href = "#";
+    card.href = `../shop/products.html?id=${jacket.id}`
 
     // Image container with button
     const imgDiv = createElement("div", "img");
