@@ -95,3 +95,4 @@ cartBtn.addEventListener("click", () => {
 
 // Initialize badge visibility on page load
 updateCartBadge();
+

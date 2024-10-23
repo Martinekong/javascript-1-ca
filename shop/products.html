@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/jackets.css">
   <script src="../js/products.js" type="module"></script>
+  <script src="../js/header.js" defer></script>
   <title>Document</title>
 </head>
 <body>
@@ -25,9 +26,17 @@
     </section>
 
     <section class="header-end">
-      <button>
+      <button id="menu-btn">
         <i class="fa-solid fa-bars fa-2x"></i>
       </button>
+      <nav class="menu">
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <label for="header-search"></label>
       <input type="search" id="header-search" placeholder="search...">
       <button>
