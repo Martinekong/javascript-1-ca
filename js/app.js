@@ -1,10 +1,13 @@
 import { rainydaysApi } from "./constants.js";
 import { createElement, createElementWithClass } from "./utils.js";
 
+let jackets = [];
+
 async function fetchJackets() {
   try {
     const response = await fetch(rainydaysApi);
-    const { data: jackets } = await response.json();
+    const { data } = await response.json();
+    jackets = data;
     displayJackets(jackets)
     console.log(jackets)
   } catch (error) {
@@ -12,10 +15,11 @@ async function fetchJackets() {
   }
 }
 
-function displayJackets(jackets) {
+function displayJackets(jacketsToDisplay) {
   const shopGrid = document.getElementById("shop-grid");
+  shopGrid.innerHTML = "";
 
-  jackets.forEach((jacket) => {
+  jacketsToDisplay.forEach((jacket) => {
     const card = createElementWithClass("a", "card");
     card.href = `../shop/products.html?id=${jacket.id}`
 
@@ -23,7 +27,6 @@ function displayJackets(jackets) {
     const img = createElement("img");
     img.src = jacket.image.url;
     img.alt = jacket.image.alt || jacket.title;
-
     imgDiv.appendChild(img);
 
     const textDiv = createElementWithClass("div", "text");
@@ -53,5 +56,35 @@ function displayJackets(jackets) {
     shopGrid.appendChild(card);
   });
 }
+
+function showFilterOptions() {
+  const filterBtn = document.getElementById("filter-btn");
+  const filterSection = document.getElementById("filter-section")
+
+  filterBtn.addEventListener("click", () => (
+    filterSection.classList.toggle("visible")
+  ));
+}
+
+function applyFilter() {
+  const genderFilter = document.getElementById("gender-filter").value;
+  const saleFilter = document.getElementById("sale-filter").checked;
+
+  const filteredJackets = jackets.filter((jacket) => {
+    const matchesGender = genderFilter === "all" || jacket.gender === genderFilter;
+    const matchesSale = !saleFilter || jacket.onSale;
+
+    return matchesGender && matchesSale;
+  });
+
+  displayJackets(filteredJackets);
+
+  document.getElementById("filter-section").classList.remove("visible");
+};
+
+showFilterOptions()
+
+const applyFiltersBtn = document.getElementById("apply-filter");
+applyFiltersBtn.addEventListener("click", applyFilter) 
 
 fetchJackets();

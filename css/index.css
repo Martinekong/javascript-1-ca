@@ -127,3 +127,35 @@
   text-align: right;
 }
 
+#shop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#shop h1 {
+  text-align: center;
+}
+
+#filter-section {
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+  padding: 1rem;
+}
+
+#filter-section.visible {
+  display: flex;
+}
+
+#apply-filter {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}

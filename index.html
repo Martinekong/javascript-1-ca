@@ -70,15 +70,33 @@
       </a>
     </section>
 
-    <section id="shop-grid">
+    <section id="shop">
       <h1>shop our collection</h1>
-      <button class="secondary-btn" id="filter">
+      <button class="secondary-btn" id="filter-btn">
         <p>filter</p>
         <i class="fa-solid fa-filter"></i>
       </button>
 
-
+      <div id="filter-section">
+        <label for="gender-filter">Gender</label>
+        <select id="gender-filter">
+          <option value="all">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      
+        <label>
+          <input type="checkbox" id="sale-filter" />
+          On Sale
+        </label>
+      
+        <button id="apply-filter">
+          Apply Filter
+        </button>
+      </div>
     </section>
+
+    <section id="shop-grid"></section>
   </main>
 
   <footer>
