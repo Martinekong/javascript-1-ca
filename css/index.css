@@ -74,18 +74,16 @@
   gap: 2rem;
 }
 
-#shop-grid h1 {
-  text-align: center;
-  grid-column: span 2;
-}
-
-#shop-grid .secondary-btn {
-  grid-column: span 2;
+@media screen and (min-width: 701px) {
+  #shop-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px auto;
 }
 
 .card .img {
@@ -93,8 +91,12 @@
   position: relative;
 }
 
-.img  {
+/* .img  {
   height: 300px;
+} */
+
+.img img {
+  object-fit: cover;
 }
 
 #add-to-cart {

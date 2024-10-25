@@ -1,10 +1,16 @@
-const faqBtn = document.querySelectorAll(".faq-btn");
-const faqAnswer = document.querySelectorAll(".faq-answer");
+const faqItems = document.querySelectorAll(".faq-item");
 
-faqBtn.forEach((faqBtn) => {
+faqItems.forEach((faqItem) => {
+  const faqBtn = faqItem.querySelector(".faq-btn");
+  const faqAnswer = faqItem.querySelector(".faq-answer");
+
   faqBtn.addEventListener("click", () => {
-    faqAnswer.forEach((faqAnswer) => {
-      faqAnswer.classList.toggle("visible")
+    faqAnswer.classList.toggle("visible");
+
+    faqItems.forEach((item) => {
+      if (item !== faqItem) {
+        item.querySelector(".faq-answer").classList.remove("visible");
+      }
     });
-  })
-})
+  });
+});

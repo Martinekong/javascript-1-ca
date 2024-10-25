@@ -1,5 +1,5 @@
 import { rainydaysApi } from "./constants.js";
-import { createElement } from "./utils.js";
+import { createElement, createElementWithClass } from "./utils.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const jacketId = urlParams.get("id")
@@ -10,6 +10,7 @@ async function getProductById() {
     const { data } = await response.json();
     console.log(data)
     displayProductById(data);
+    chooseSizes(data.sizes);
   } catch (error) {
     console.error("Error fetching API:", error);
   }
@@ -59,4 +60,34 @@ function displayProductById(product) {
   productContainer.appendChild(jacketGender)
   productContainer.appendChild(jacketPrice)
   productContainer.appendChild(jacketDescription)
+}
+
+function chooseSizes(sizesArray) {
+  const sizesContainer = document.getElementById("sizes");
+
+  const groupLabel = createElement("label");
+  groupLabel.textContent = "Select Size:";
+  sizesContainer.appendChild(groupLabel);
+
+  sizesArray.forEach((size) => {
+    const sizeOptionContainer = createElementWithClass("label", "size-option");
+
+    const sizeOption = createElement("input");
+    sizeOption.type = "radio";
+    sizeOption.name = "size"
+    sizeOption.value = size;
+
+    const sizeLabel = createElement("span");
+    sizeLabel.textContent = size;
+
+    sizeOptionContainer.appendChild(sizeOption);
+    sizeOptionContainer.appendChild(sizeLabel);
+    sizesContainer.appendChild(sizeOptionContainer);
+  });
+
+  // Toggle visibility on button click
+  const sizeBtn = document.getElementById("size-btn");
+  sizeBtn.addEventListener("click", () => {
+    sizesContainer.classList.toggle("visible");
+  });
 }
