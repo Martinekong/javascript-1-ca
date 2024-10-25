@@ -147,7 +147,6 @@ textarea#message:focus {
   font-size: 1.25rem;
   border: 2px solid var(--primary-color);
   border-radius: 6px 6px 0 0;
-  border-bottom: none;
 }
 
 .faq-question div {
@@ -165,7 +164,13 @@ textarea#message:focus {
 .faq-answer {
   padding: 1rem;
   border: 2px solid var(--primary-color);
+  border-top: none;
   border-radius: 0 0 6px 6px;
+  display: none;
+}
+
+.faq-answer.visible {
+  display: block;
 }
 
 .faq-answer p:first-child {

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/content.css">
   <script src="../js/header.js" defer></script>
+  <script src="../js/faq.js" defer></script>
   <title>Rainydays | FAQ</title>
 </head>
 
@@ -22,7 +23,6 @@
       <a href="../index.html" class="header-logo">rainydays.</a>
       <button id="cart-btn">
         <i class="fa-solid fa-bag-shopping fa-2x"></i>
-        <span id="cart-badge">0</span>
       </button>
     </section>
 
@@ -31,11 +31,15 @@
         <i class="fa-solid fa-bars fa-2x"></i>
       </button>
       <nav class="menu">
+        <button id="menu-exit">
+          <i class="fa-solid fa-xmark fa-3x"></i>
+        </button>
         <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#shop">Shop</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </nav>
       <label for="header-search"></label>
@@ -64,7 +68,9 @@
             <i class="fa-solid fa-right-left"></i>
             <p>Returns</p>
           </div>
-          <i class="fa-solid fa-plus"></i>
+          <button class="faq-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="faq-answer">
           <p>What is the return policy?</p>
@@ -78,7 +84,9 @@
             <i class="fa-solid fa-arrows-rotate"></i>
             <p>Exchange</p>
           </div>
-          <i class="fa-solid fa-plus"></i>
+          <button class="faq-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="faq-answer">
           <p>Can I exchange an item?</p>
@@ -92,7 +100,9 @@
             <i class="fa-regular fa-paper-plane"></i>
             <p>Delivery</p>
           </div>
-          <i class="fa-solid fa-plus"></i>
+          <button class="faq-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="faq-answer">
           <p>How long does delivery take?</p>
@@ -106,7 +116,9 @@
             <i class="fa-regular fa-credit-card"></i>
             <p>Payment</p>
           </div>
-          <i class="fa-solid fa-plus"></i>
+          <button class="faq-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="faq-answer">
           <p>What payment methods are accepted?</p>
@@ -120,7 +132,9 @@
             <i class="fa-regular fa-bookmark"></i>
             <p>Orders</p>
           </div>
-          <i class="fa-solid fa-plus"></i>
+          <button class="faq-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="faq-answer">
           <p>How do I track my order?</p>
