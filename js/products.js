@@ -1,4 +1,5 @@
 import { rainydaysApi } from "./constants.js";
+import { createElement } from "./utils.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const jacketId = urlParams.get("id")
@@ -19,22 +20,22 @@ getProductById()
 function displayProductById(product) {
   const productContainer = document.getElementById("product-container");
 
-  const image = document.createElement("img");
+  const image = createElement("img");
   image.src = product.image.url;
   image.alt = product.alt || product.title
 
-  const title = document.createElement("h1");
+  const title = createElement("h1");
   title.textContent = product.title.replace(/^Rainy Days\s*/, "");
 
-  const jacketGender = document.createElement("p");
+  const jacketGender = createElement("p");
   jacketGender.textContent = product.gender;
 
-  const jacketPrice = document.createElement("div")
-  const price = document.createElement("p");
+  const jacketPrice = createElement("div")
+  const price = createElement("p");
   price.textContent = product.price
 
   if (product.onSale) {
-    const discountedPrice = document.createElement("p")
+    const discountedPrice = createElement("p")
     discountedPrice.textContent = product.discountedPrice;
     jacketPrice.appendChild(price);
     jacketPrice.appendChild(discountedPrice)
@@ -42,12 +43,12 @@ function displayProductById(product) {
     jacketPrice.appendChild(price)
   }
 
-  const jacketDescription = document.createElement("div");
+  const jacketDescription = createElement("div");
 
-  const descriptionHeading = document.createElement("h2")
+  const descriptionHeading = createElement("h2")
   descriptionHeading.textContent = "Description";
 
-  const description = document.createElement("p");
+  const description = createElement("p");
   description.textContent = product.description;
 
   jacketDescription.appendChild(descriptionHeading);
