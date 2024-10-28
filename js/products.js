@@ -23,21 +23,21 @@ function displayProductById(product) {
 
   const image = createElement("img");
   image.src = product.image.url;
-  image.alt = product.alt || product.title
+  image.alt = product.alt;
 
   const title = createElement("h1");
   title.textContent = product.title.replace(/^Rainy Days\s*/, "");
 
   const jacketGender = createElement("p");
-  jacketGender.textContent = product.gender;
+  jacketGender.textContent = `Gender: ${product.gender}`;
 
   const jacketPrice = createElement("div")
   const price = createElement("p");
-  price.textContent = product.price
+  price.textContent = `$${product.discountedPrice}`;
 
   if (product.onSale) {
-    const discountedPrice = createElement("p")
-    discountedPrice.textContent = product.discountedPrice;
+    const discountedPrice = createElementWithClass("p", "old-price")
+    discountedPrice.textContent = `$${product.price}`;
     jacketPrice.appendChild(price);
     jacketPrice.appendChild(discountedPrice)
   } else {

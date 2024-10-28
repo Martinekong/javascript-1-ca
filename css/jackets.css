@@ -4,6 +4,11 @@
   gap: 1rem;
 }
 
+#product-container img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
 #product-btns {
   display: flex;
   flex-direction: column;
@@ -17,4 +22,18 @@
 #sizes.visible {
   display: flex;
   flex-direction: column;
+}
+
+.old-price {
+  text-decoration-line: line-through;
+}
+
+@media screen and (min-width: 701px) {
+  #product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #product-container img {
+    grid-row: span 4;
+  }
 }

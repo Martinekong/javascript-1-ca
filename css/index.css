@@ -70,11 +70,17 @@
 /* SHOP */
 #shop-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 501px) {
+  #shop-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 901px) {
   #shop-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -84,6 +90,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px auto;
+  border: 1px solid var(--secondary-color);
+  padding: .5rem;
 }
 
 .card .img {
@@ -91,12 +99,8 @@
   position: relative;
 }
 
-/* .img  {
-  height: 300px;
-} */
-
 .img img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #add-to-cart {
