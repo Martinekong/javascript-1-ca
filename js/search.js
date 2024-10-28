@@ -33,7 +33,6 @@ function displaySearchResults(results) {
 
   if (results.length === 0) {
     resultsContainer.innerHTML = `<p>No results found for "${query}"</p>`;
-    return;
   }
 
   results.forEach((jacket) => {
@@ -47,12 +46,21 @@ function displaySearchResults(results) {
     const resultTitle = createElement("p");
     resultTitle.textContent = jacket.title;
 
-    const resultPrice = createElement("p");
-    resultPrice.textContent = jacket.discountedPrice;
-
     resultItem.appendChild(resultImg);
     resultItem.appendChild(resultTitle);
-    resultItem.appendChild(resultPrice);
+
+    const resultPrice = createElement("p");
+    resultPrice.textContent = `$${jacket.discountedPrice}`;
+
+    if (jacket.onSale) {
+      const resultOldPrice = createElement("p");
+      resultOldPrice.classList.add("old-price");
+      resultOldPrice.textContent = `$${jacket.price}`;
+      resultItem.appendChild(resultPrice);
+      resultItem.appendChild(resultOldPrice);
+    } else {
+      resultItem.appendChild(resultPrice)
+    }
 
     resultsContainer.appendChild(resultItem);
   });

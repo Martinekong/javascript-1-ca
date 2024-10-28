@@ -37,3 +37,38 @@
     grid-row: span 4;
   }
 }
+
+.search-header {
+  text-align: center;
+}
+
+#search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.search-result-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
+  width: 340px;
+}
+
+.search-result-item img {
+  grid-row: span 3;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.search-result-item p {
+  color: black;
+}
+
+.search-page-btn {
+  max-width: 340px;
+  margin: 0 auto;
+}
