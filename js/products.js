@@ -85,7 +85,6 @@ function chooseSizes(sizesArray) {
     sizesContainer.appendChild(sizeOptionContainer);
   });
 
-  // Toggle visibility on button click
   const sizeBtn = document.getElementById("size-btn");
   sizeBtn.addEventListener("click", () => {
     sizesContainer.classList.toggle("visible");

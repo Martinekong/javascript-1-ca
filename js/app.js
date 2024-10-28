@@ -26,7 +26,7 @@ function displayJackets(jacketsToDisplay) {
     const imgDiv = createElementWithClass("div", "img");
     const img = createElement("img");
     img.src = jacket.image.url;
-    img.alt = jacket.image.alt || jacket.title;
+    img.alt = jacket.image.alt;
     imgDiv.appendChild(img);
 
     const textDiv = createElementWithClass("div", "text");
