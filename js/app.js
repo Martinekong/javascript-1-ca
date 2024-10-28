@@ -1,10 +1,12 @@
-import { rainydaysApi } from "./constants.js";
+import { rainydaysApi, loadingSpinner } from "./constants.js";
 import { createElement, createElementWithClass } from "./utils.js";
 
 let jackets = [];
 
 async function fetchJackets() {
   try {
+    loadingSpinner.classList.remove("hidden")
+
     const response = await fetch(rainydaysApi);
     const { data } = await response.json();
     jackets = data;
@@ -12,6 +14,8 @@ async function fetchJackets() {
     console.log(jackets)
   } catch (error) {
     console.error("Error fetching jackets:", error)
+  } finally {
+    loadingSpinner.classList.add("hidden")
   }
 }
 

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/index.css">
   <script src="js/app.js" type="module"></script>
-  <script src="js/header.js" defer></script>
+  <script src="js/header.js" type="module"></script>
   <title>Rainydays | Home</title>
 </head>
 
@@ -44,7 +44,7 @@
       </nav>
       <label for="header-search"></label>
       <input type="search" id="header-search" placeholder="search...">
-      <button>
+      <button id="search-btn">
         <i class="fa-solid fa-magnifying-glass fa-2x"></i>
       </button>
     </section>
@@ -99,6 +99,8 @@
       </div>
     </section>
 
+    <div id="loading-spinner" class="spinner hidden"></div>
+    
     <section id="shop-grid"></section>
   </main>
 

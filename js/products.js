@@ -1,4 +1,4 @@
-import { rainydaysApi } from "./constants.js";
+import { rainydaysApi, loadingSpinner } from "./constants.js";
 import { createElement, createElementWithClass } from "./utils.js";
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -6,6 +6,8 @@ const jacketId = urlParams.get("id")
 
 async function getProductById() {
   try {
+    loadingSpinner.classList.remove("hidden")
+
     const response = await fetch(`${rainydaysApi}/${jacketId}`);
     const { data } = await response.json();
     console.log(data)
@@ -13,6 +15,8 @@ async function getProductById() {
     chooseSizes(data.sizes);
   } catch (error) {
     console.error("Error fetching API:", error);
+  } finally {
+    loadingSpinner.classList.add("hidden")
   }
 }
 

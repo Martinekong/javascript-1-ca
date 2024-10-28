@@ -22,3 +22,24 @@ document.addEventListener("click", (event) => {
     menuActive = false;
   }
 });
+
+
+// SEARCH
+
+const searchInput = document.getElementById("header-search");
+const searchBtn = document.getElementById("search-btn");
+
+function performSearch() {
+  const query = searchInput.value.trim();
+  if (query) {
+    window.location.href = `../shop/search-results.html?q=${encodeURIComponent(query)}`;
+  }
+}
+
+searchInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    performSearch();
+  }
+});
+
+searchBtn.addEventListener("click", performSearch);
