@@ -236,6 +236,11 @@ border-radius: 0;
   text-transform: uppercase;
 }
 
+.primary-btn:hover {
+  background-color: rgb(26, 44, 60);
+  transition: .3s;
+}
+
 .secondary-btn {
   background-color: var(--secondary-color);
   color: var(--primary-color);

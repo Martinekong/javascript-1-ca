@@ -23,9 +23,6 @@ document.addEventListener("click", (event) => {
   }
 });
 
-
-// SEARCH
-
 const searchInput = document.getElementById("header-search");
 const searchBtn = document.getElementById("search-btn");
 

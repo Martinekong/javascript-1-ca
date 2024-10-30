@@ -30,15 +30,13 @@ async function fetchSearchResults(query) {
 
 function displaySearchResults(results) {
   const resultsContainer = document.getElementById("search-results");
-  const result = createElement("p");
+  const resultText = document.getElementById("search-text")
 
   if (results.length === 0) {
-    result.textContent = `No result found for "${query}"`
+    resultText.textContent = `No result found for "${query}"`
   } else {
-    result.textContent = `Search results for "${query}":`
+    resultText.textContent = `Search results for "${query}":`
   }
-
-  resultsContainer.appendChild(result)
 
   results.forEach((jacket) => {
     const resultItem = createElementWithClass("a", "search-result-item");
@@ -49,7 +47,7 @@ function displaySearchResults(results) {
     resultImg.alt = jacket.image.alt;
 
     const resultTitle = createElement("p");
-    resultTitle.textContent = jacket.title;
+    resultTitle.textContent = jacket.title.replace(/^Rainy Days\s*/, "");
 
     resultItem.appendChild(resultImg);
     resultItem.appendChild(resultTitle);
