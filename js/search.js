@@ -30,10 +30,15 @@ async function fetchSearchResults(query) {
 
 function displaySearchResults(results) {
   const resultsContainer = document.getElementById("search-results");
+  const result = createElement("p");
 
   if (results.length === 0) {
-    resultsContainer.innerHTML = `<p>No results found for "${query}"</p>`;
+    result.textContent = `No result found for "${query}"`
+  } else {
+    result.textContent = `Search results for "${query}":`
   }
+
+  resultsContainer.appendChild(result)
 
   results.forEach((jacket) => {
     const resultItem = createElementWithClass("a", "search-result-item");

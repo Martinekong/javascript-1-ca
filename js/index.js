@@ -1,12 +1,11 @@
 import { rainydaysApi, loadingSpinner } from "./constants.js";
-import { createElement, createElementWithClass } from "./utils.js";
+import { displayJackets } from "./utils.js";
 
 let jackets = [];
 
 async function fetchJackets() {
   try {
     loadingSpinner.classList.remove("hidden")
-
     const response = await fetch(rainydaysApi);
     const { data } = await response.json();
     jackets = data;
@@ -17,48 +16,6 @@ async function fetchJackets() {
   } finally {
     loadingSpinner.classList.add("hidden")
   }
-}
-
-function displayJackets(jacketsToDisplay) {
-  const shopGrid = document.getElementById("shop-grid");
-  shopGrid.innerHTML = "";
-
-  jacketsToDisplay.forEach((jacket) => {
-    const card = createElementWithClass("a", "card");
-    card.href = `../shop/products.html?id=${jacket.id}`
-
-    const imgDiv = createElementWithClass("div", "img");
-    const img = createElement("img");
-    img.src = jacket.image.url;
-    img.alt = jacket.image.alt;
-    imgDiv.appendChild(img);
-
-    const textDiv = createElementWithClass("div", "text");
-    const name = createElementWithClass("p", "name");
-    name.textContent = jacket.title.replace(/^Rainy Days\s*/, "");
-
-    const priceDiv = createElement("div");
-    const price = createElementWithClass("p", "price");
-    price.textContent = `$${jacket.discountedPrice}`;
-
-    const oldPrice = createElementWithClass("p", "old-price");
-    if (jacket.onSale) {
-      oldPrice.textContent = `$${jacket.price}`;
-    } else {
-      oldPrice.style.display = "none";
-    }
-
-    priceDiv.appendChild(price);
-    priceDiv.appendChild(oldPrice);
-    
-    textDiv.appendChild(name);
-    textDiv.appendChild(priceDiv);
-
-    card.appendChild(imgDiv);
-    card.appendChild(textDiv);
-
-    shopGrid.appendChild(card);
-  });
 }
 
 function showFilterOptions() {

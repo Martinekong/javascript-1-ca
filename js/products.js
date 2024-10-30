@@ -4,14 +4,13 @@ import { createElement, createElementWithClass } from "./utils.js";
 const urlParams = new URLSearchParams(window.location.search);
 const jacketId = urlParams.get("id")
 
-async function getProductById() {
+async function fetchJacketById() {
   try {
     loadingSpinner.classList.remove("hidden")
-
     const response = await fetch(`${rainydaysApi}/${jacketId}`);
     const { data } = await response.json();
     console.log(data)
-    displayProductById(data);
+    displayJacketById(data);
     chooseSizes(data.sizes);
   } catch (error) {
     console.error("Error fetching API:", error);
@@ -20,28 +19,26 @@ async function getProductById() {
   }
 }
 
-getProductById()
-
-function displayProductById(product) {
+function displayJacketById(jacket) {
   const productContainer = document.getElementById("product-container");
 
   const image = createElement("img");
-  image.src = product.image.url;
-  image.alt = product.alt;
+  image.src = jacket.image.url;
+  image.alt = jacket.alt;
 
   const title = createElement("h1");
-  title.textContent = product.title.replace(/^Rainy Days\s*/, "");
+  title.textContent = jacket.title.replace(/^Rainy Days\s*/, "");
 
   const jacketGender = createElement("p");
-  jacketGender.textContent = `Gender: ${product.gender}`;
+  jacketGender.textContent = `Gender: ${jacket.gender}`;
 
   const jacketPrice = createElement("div")
   const price = createElement("p");
-  price.textContent = `$${product.discountedPrice}`;
+  price.textContent = `$${jacket.discountedPrice}`;
 
-  if (product.onSale) {
+  if (jacket.onSale) {
     const discountedPrice = createElementWithClass("p", "old-price")
-    discountedPrice.textContent = `$${product.price}`;
+    discountedPrice.textContent = `$${jacket.price}`;
     jacketPrice.appendChild(price);
     jacketPrice.appendChild(discountedPrice)
   } else {
@@ -54,7 +51,7 @@ function displayProductById(product) {
   descriptionHeading.textContent = "Description";
 
   const description = createElement("p");
-  description.textContent = product.description;
+  description.textContent = jacket.description;
 
   jacketDescription.appendChild(descriptionHeading);
   jacketDescription.appendChild(description);
@@ -94,3 +91,5 @@ function chooseSizes(sizesArray) {
     sizesContainer.classList.toggle("visible");
   });
 }
+
+fetchJacketById()
