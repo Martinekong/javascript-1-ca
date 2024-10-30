@@ -13,15 +13,19 @@
   <link rel="stylesheet" href="../css/index.css">
   <script src="../js/header.js" type="module"></script>
   <script src="../js/shop-gender.js" type="module"></script>
+  <script src="../js/cart.js" type="module"></script>
   <title>Shop Female</title>
 </head>
 <body>
   <header>
     <section class="header-start">
       <a href="../index.html" class="header-logo">rainydays.</a>
-      <button id="cart-btn">
-        <i class="fa-solid fa-bag-shopping fa-2x"></i>
-      </button>
+      <a href="../checkout/checkout.html">
+        <button id="cart-btn">
+          <i class="fa-solid fa-bag-shopping fa-2x"></i>
+          <span id="cart-count"></span> 
+        </button>
+      </a>
     </section>
 
     <section class="header-end">

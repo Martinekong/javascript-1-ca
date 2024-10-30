@@ -73,10 +73,6 @@ header {
   margin-bottom: 1rem;
 }
 
-.header-start .fa-bag-shopping {
-  padding-right: 1.5rem;
-}
-
 .header-logo {
   font-family: "roboto";
   font-weight: 600;
@@ -84,6 +80,25 @@ header {
   text-transform: uppercase;
   color: var(--primary-color);
 }
+
+.header-start .fa-bag-shopping {
+  padding-right: 1.5rem;
+}
+
+#cart-btn {
+  position: relative;
+}
+
+#cart-count {
+  position: absolute;
+  background-color: var(--secondary-color);
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  top: 0;
+  right: 1rem;
+  display: none;
+}
+
 
 .header-end {
   display: flex;
