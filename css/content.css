@@ -84,7 +84,7 @@
 
 form {
   border: 2px solid var(--primary-color);
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: 6px;
 }
 

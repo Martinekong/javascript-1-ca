@@ -107,3 +107,33 @@ function updateCartBadge(cartItems) {
 }
 
 fetchCartItems();
+
+const checkoutBtn = document.getElementById("checkout-btn")
+
+checkoutBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const firstName = document.getElementById("first-name").value.trim();
+  const lastName = document.getElementById("last-name").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const postalCode = document.getElementById("postal-code").value.trim();
+  const city = document.getElementById("city").value.trim();
+  const country = document.getElementById("country").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const card = document.getElementById("card").value.trim();
+  const expirationDate = document.getElementById("expiration-date").value.trim();
+  const cvc = document.getElementById("cvc").value.trim();
+
+  if (
+    firstName && lastName && address && postalCode && city &&
+    country && email && card && expirationDate && cvc
+  ) {
+    window.location.href = "order-confirmed.html";
+  } else {
+    if (!document.querySelector(".error-message")) {
+      const errorMessage = createElementWithClass("p", "error-message")
+      errorMessage.textContent = "You need to fill out all fields"
+      checkoutBtn.appendChild(errorMessage)  
+    }
+  }
+});

@@ -45,3 +45,16 @@ function updateCartBadge(cart) {
 }
 
 addToCart();
+
+
+// Hide cart badge and remove all items from cart when order confirmed
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("order-confirmed.html")) {
+    localStorage.removeItem("cart");
+
+    const cartBadge = document.getElementById("cart-count");
+    if (cartBadge) {
+      cartBadge.style.display = "none";
+    }
+  }
+});
