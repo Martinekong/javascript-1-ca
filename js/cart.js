@@ -28,6 +28,11 @@ function addToCart() {
 
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartBadge(cart);
+
+      addToCartBtn.textContent = "added to cart";
+      setTimeout(() => {
+        addToCartBtn.textContent = "add to cart";
+      }, 2000);
     });
   }
 }
