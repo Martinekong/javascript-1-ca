@@ -29,7 +29,7 @@ const searchBtn = document.getElementById("search-btn");
 function performSearch() {
   const query = searchInput.value.trim();
   if (query) {
-    window.location.href = `../shop/search-results.html?q=${encodeURIComponent(query)}`;
+    window.location.href = `/shop/search-results.html?q=${encodeURIComponent(query)}`;
   }
 }
 
