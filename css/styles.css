@@ -97,18 +97,19 @@ header {
 
 #cart-btn {
   position: relative;
+  color: var(--primary-color)
 }
 
 #cart-count {
   position: absolute;
   background-color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 0.1rem 0.3rem;
   border-radius: 50%;
   top: 0;
   right: 1rem;
   display: none;
 }
-
 
 .header-end {
   display: flex;
