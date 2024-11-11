@@ -29,7 +29,15 @@ const searchBtn = document.getElementById("search-btn");
 function performSearch() {
   const query = searchInput.value.trim();
   if (query) {
-    window.location.href = `${window.location.origin}/shop/search-results.html?q=${encodeURIComponent(query)}`;
+    if (window.location.pathname.includes("index.html")) {
+      window.location.href = `shop/search-results.html?q=${encodeURIComponent(query)}`;
+    } else if (
+      window.location.pathname.includes("shop-female.html") || window.location.pathname.includes("shop-male.html") ||
+      window.location.pathname.includes ("search-results.html")) {
+      window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+    } else {
+      window.location.href = `../shop/search-results.html?q=${encodeURIComponent(query)}`;
+    }
   }
 }
 
