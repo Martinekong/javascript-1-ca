@@ -16,7 +16,7 @@ export function displayJackets(jacketsToDisplay) {
 
   jacketsToDisplay.forEach((jacket) => {
     const card = createElementWithClass("a", "card");
-    card.href = `/shop/products.html?id=${jacket.id}`
+    card.href = `${window.location.origin}/shop/products.html?id=${jacket.id}`;
 
     const imgDiv = createElementWithClass("div", "img");
     const img = createElement("img");
