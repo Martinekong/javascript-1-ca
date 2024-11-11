@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/content.css">
   <script src="../js/header.js" type="module"></script>
   <script src="../js/cart.js" type="module"></script>
+  <script src="../js/contact.js" type="module"></script>
   <title>Rainydays | Contact</title>
 </head>
 
@@ -94,7 +95,7 @@
         <button class="secondary-btn">FAQ</button>
       </a>
 
-      <div class="message" id="message">
+      <div class="contact-message">
         <h2>Send us a message</h2>
         <p>We'd love to hear from you! Whether you have a question about our products, need assistance with an order, or just want to share your feedback, feel free to reach out. Simply fill out the form below, and a member of our team will get back to you as soon as possible.</p>
         <p>Your inquiries are important to us, and we aim to respond within 24-48 hours. Thank you for choosing Rainydays!</p>
@@ -125,8 +126,10 @@
         <textarea id="message" placeholder="Your message..." required></textarea>
       </div>
       
-      <button class="primary-btn">submit</button>
+      <button class="primary-btn" id="submit-btn">submit</button>
     </form>
+
+    <p id="submit-message"></p>
   </main>
 
   <footer>

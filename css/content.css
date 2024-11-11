@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 300px repeat(2, auto) 300px auto;
-  margin: 0rem 1rem;
   gap: 1rem;
 }
 
@@ -36,7 +35,6 @@
 
 /* CONTACT */
 .contact {
-  margin: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -61,10 +59,14 @@
   margin: 0 auto;
 }
 
-.message {
+.contact-message {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 900px) {
@@ -73,7 +75,7 @@
   }
 
   .contact-text,
-  .contact .message {
+  .contact .contact-message {
     grid-column: span 2;
   }
 
@@ -134,7 +136,7 @@ textarea#message:focus {
 
 /* FAQ */
 .faq {
-  margin: 0 1rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -185,11 +187,9 @@ textarea#message:focus {
 
 /* DOCUMENTS */
 .documents-container {
-  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 700px;
 }
 
 .last-updated {
@@ -205,11 +205,4 @@ textarea#message:focus {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-@media screen and (min-width: 900px) {
-  .documents-container {
-    max-width: 700px;
-    margin: 0 auto;
-  }
 }

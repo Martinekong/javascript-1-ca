@@ -124,10 +124,8 @@ checkoutBtn.addEventListener("click", (event) => {
   const expirationDate = document.getElementById("expiration-date").value.trim();
   const cvc = document.getElementById("cvc").value.trim();
 
-  if (
-    firstName && lastName && address && postalCode && city &&
-    country && email && card && expirationDate && cvc
-  ) {
+  if (firstName && lastName && address && postalCode && city &&
+    country && email && card && expirationDate && cvc) {
     window.location.href = "order-confirmed.html";
   } else {
     if (!document.querySelector(".error-message")) {

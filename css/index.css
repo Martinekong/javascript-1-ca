@@ -20,7 +20,7 @@
   top: 0.5rem;
   font-weight: 700;
   opacity: .6;
-  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-size: clamp(2.6rem, 5vw, 4rem);
 }
 
 .heading {
@@ -28,8 +28,8 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: clamp(3rem, 5vw, 10rem);
-  font-size: clamp(3rem, 5vw, 8rem);
-  max-width: 360px;
+  font-size: clamp(3rem, 5vw, 4rem);
+  max-width: 320px;
 }
 
 .hero-circles {
@@ -62,7 +62,8 @@
 
 @media screen and (min-width: 1500px) {
   .heading {
-    max-width: 500px;
+    max-width: 400px;
+    bottom: 5rem;
   }
 }
 
