@@ -24,6 +24,14 @@
   flex-direction: column;
 }
 
+.size-option {
+  display: flex;
+  padding: .5rem;
+  gap: 1rem;
+  border-top: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
 .old-price {
   text-decoration-line: line-through;
 }

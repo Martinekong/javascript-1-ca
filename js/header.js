@@ -52,3 +52,16 @@ searchInput.addEventListener("keypress", (event) => {
 });
 
 searchBtn.addEventListener("click", performSearch);
+
+
+const newsletterBtn = document.getElementById("newsletter-btn");
+const footerNewsletterInput = document.getElementById("footer-newsletter-input")
+
+newsletterBtn.addEventListener("click", () => {
+  if (footerNewsletterInput.value.includes("@")) {
+    alert("Thank you for subscribing to our newsletter!")
+    footerNewsletterInput.value = "";
+  } else {
+    alert("Please fill out valid email to subscribe to our newsletter")
+  }
+})

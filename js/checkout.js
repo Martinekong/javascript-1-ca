@@ -30,8 +30,8 @@ async function fetchCartItems() {
       const sizeText = createElement("p");
       sizeText.textContent = `Size: ${size}`
 
-      const itemPrice = itemData.discountedPrice * itemQuantity;
-      totalPrice += itemPrice;
+      const itemPrice = itemData.discountedPrice;
+      totalPrice += itemPrice * itemQuantity;
 
       const price = createElement("p");
       price.textContent = `$${itemPrice.toFixed(2)}`
