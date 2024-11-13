@@ -29,14 +29,18 @@ const searchBtn = document.getElementById("search-btn");
 function performSearch() {
   const query = searchInput.value.trim();
   if (query) {
-    if (window.location.pathname.includes("index.html")) {
-      window.location.href = `shop/search-results.html?q=${encodeURIComponent(query)}`;
-    } else if (
-      window.location.pathname.includes("shop-female.html") || window.location.pathname.includes("shop-male.html") ||
-      window.location.pathname.includes ("search-results.html")) {
+    if (
+      window.location.pathname.includes("shop-female.html") || 
+      window.location.pathname.includes("shop-male.html") ||
+      window.location.pathname.includes ("search-results.html") ||
+      window.location.pathname.includes("products.html")) {
       window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
-    } else {
+    } else if (
+      window.location.pathname.includes("about") ||
+      window.location.pathname.includes("checkout")) {
       window.location.href = `../shop/search-results.html?q=${encodeURIComponent(query)}`;
+    } else {
+      window.location.href = `shop/search-results.html?q=${encodeURIComponent(query)}`
     }
   }
 }

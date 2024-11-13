@@ -17,14 +17,13 @@ export function displayJackets(jacketsToDisplay) {
   jacketsToDisplay.forEach((jacket) => {
     const card = createElementWithClass("a", "card");
 
-    if (window.location.pathname.includes("index.html")) {
-      card.href = `shop/products.html?id=${jacket.id}`;
-    } else if (
-      window.location.pathname.includes("shop-female.html") || window.location.pathname.includes("shop-male.html") ||
+    if (
+      window.location.pathname.includes("shop-female.html") || 
+      window.location.pathname.includes("shop-male.html") ||
       window.location.pathname.includes ("search-results.html")) {
       card.href = `products.html?id=${jacket.id}`;
     } else {
-      card.href = `../shop/products.html?id=${jacket.id}`;
+      card.href = `shop/products.html?id=${jacket.id}`;
     }
 
     const imgDiv = createElementWithClass("div", "img");
