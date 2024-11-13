@@ -15,8 +15,11 @@
   border-bottom: 1px solid var(--secondary-color);
 }
 
+.cart-item a {
+  grid-row: span 4;
+}
+
 .cart-item img {
-  grid-row: span 4; 
   max-height: 140px;
   object-fit: contain;
 }

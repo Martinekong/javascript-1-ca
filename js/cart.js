@@ -29,9 +29,13 @@ function addToCart() {
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartBadge(cart);
 
-      addToCartBtn.textContent = "added to cart";
+      addToCartBtn.textContent = "item added";
+      addToCartBtn.style.backgroundColor = "var(--secondary-color"
+      addToCartBtn.style.color = "black"
       setTimeout(() => {
         addToCartBtn.textContent = "add to cart";
+        addToCartBtn.style.backgroundColor = "var(--primary-color"
+        addToCartBtn.style.color = "white"
       }, 2000);
     });
   }

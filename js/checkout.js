@@ -20,9 +20,14 @@ async function fetchCartItems() {
       const cartDiv = createElement("div");
       cartDiv.classList.add("cart-item");
 
+      const imgContainer = createElement("a")
+      imgContainer.href = `../shop/products.html?id=${itemData.id}`;
+      
       const img = createElement("img");
       img.src = itemData.image.url;
       img.alt = itemData.image.alt;
+
+      imgContainer.appendChild(img)
 
       const name = createElement("p");
       name.textContent = itemData.title.replace(/^Rainy Days\s*/, "");
@@ -56,7 +61,7 @@ async function fetchCartItems() {
       quantityContainer.appendChild(quantityDisplay);
       quantityContainer.appendChild(plusBtn);
 
-      cartDiv.appendChild(img);
+      cartDiv.appendChild(imgContainer);
       cartDiv.appendChild(name);
       cartDiv.appendChild(sizeText)
       cartDiv.appendChild(price);
