@@ -15,7 +15,6 @@ async function fetchCartItems() {
       const response = await fetch(`${rainydaysApi}/${itemId}`);
       const data = await response.json();
       const itemData = data.data;
-      console.log(itemData);
 
       const cartDiv = createElement("div");
       cartDiv.classList.add("cart-item");

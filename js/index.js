@@ -1,5 +1,5 @@
 import { rainydaysApi, loadingSpinner } from "./constants.js";
-import { displayJackets } from "./utils.js";
+import { displayJackets, createElement } from "./utils.js";
 
 let jackets = [];
 
@@ -10,9 +10,12 @@ async function fetchJackets() {
     const { data } = await response.json();
     jackets = data;
     displayJackets(jackets)
-    console.log(jackets)
   } catch (error) {
     console.error("Error fetching jackets:", error)
+    const shopGrid = document.getElementById("shop-grid")
+    const errorMessage = createElement("p")
+    errorMessage.textContent = "Unexpected error, please try again"
+    shopGrid.appendChild(errorMessage)
   } finally {
     loadingSpinner.classList.add("hidden")
   }

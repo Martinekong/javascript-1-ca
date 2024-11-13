@@ -9,11 +9,14 @@ async function fetchJacketById() {
     loadingSpinner.classList.remove("hidden")
     const response = await fetch(`${rainydaysApi}/${jacketId}`);
     const { data } = await response.json();
-    console.log(data)
     displayJacketById(data);
     chooseSizes(data.sizes);
   } catch (error) {
     console.error("Error fetching API:", error);
+    const productContainer = document.getElementById("product-container");
+    const errorMessage = createElement("p")
+    errorMessage.textContent = "Unexpected error, please try again";
+    productContainer.appendChild(errorMessage);
   } finally {
     loadingSpinner.classList.add("hidden")
   }

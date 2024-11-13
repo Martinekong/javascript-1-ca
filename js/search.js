@@ -23,6 +23,10 @@ async function fetchSearchResults(query) {
     displaySearchResults(filteredResults);
   } catch (error) {
     console.error("Error fetching search results:", error);
+    const searchResultsContainer = document.getElementById("search-results");
+    const errorMessage = createElement("p")
+    errorMessage.textContent = "Unexpected error, please try again";
+    searchResultsContainer.appendChild(errorMessage);
   } finally {
     loadingSpinner.classList.add("hidden")
   }
