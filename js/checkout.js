@@ -4,7 +4,7 @@ import { rainydaysApi, loadingSpinner } from "./constants.js";
 const cartSummaryContainer = document.getElementById("cart-summary");
 let cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
 
-async function fetchCartItems() {
+async function displayCartItems() {
   cartSummaryContainer.innerHTML = "";
   let totalPrice = 0;
 
@@ -97,7 +97,7 @@ function adjustQuantity(itemId, adjustment, size) {
 
     localStorage.setItem("cart", JSON.stringify(cartItems));
     updateCartBadge(cartItems);
-    fetchCartItems();
+    displayCartItems();
   }
 }
 
@@ -113,7 +113,7 @@ function updateCartBadge(cartItems) {
   }
 }
 
-fetchCartItems();
+displayCartItems();
 
 const checkoutBtn = document.getElementById("checkout-btn")
 
