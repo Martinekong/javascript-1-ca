@@ -64,7 +64,8 @@
   .order-confirmed {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 275px 60px;
+    grid-template-rows: auto 290px auto;
+    gap: 2rem;
   }
 
   .order-confirmed h1 {

@@ -65,6 +65,10 @@
   gap: 1rem;
 }
 
+#submit-message {
+  text-align: center;
+}
+
 .error {
   color: red;
 }

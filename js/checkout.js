@@ -69,6 +69,9 @@ async function fetchCartItems() {
       cartSummaryContainer.appendChild(cartDiv);
     } catch (error) {
       console.error("Error fetching item:", error);
+      const errorMessage = createElement("p")
+      errorMessage.textContent = "Unexpected error, please try again";
+      cartSummaryContainer.appendChild(errorMessage);  
     } finally {
       loadingSpinner.classList.add("hidden");
     }
