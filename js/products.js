@@ -42,8 +42,7 @@ function displayJacketById(jacket) {
   if (jacket.onSale) {
     const discountedPrice = createElementWithClass("p", "old-price")
     discountedPrice.textContent = `$${jacket.price}`;
-    jacketPrice.appendChild(price);
-    jacketPrice.appendChild(discountedPrice)
+    jacketPrice.append(price, discountedPrice);
   } else {
     jacketPrice.appendChild(price)
   }
@@ -56,14 +55,9 @@ function displayJacketById(jacket) {
   const description = createElement("p");
   description.textContent = jacket.description;
 
-  jacketDescription.appendChild(descriptionHeading);
-  jacketDescription.appendChild(description);
+  jacketDescription.append(descriptionHeading, description);
 
-  productContainer.appendChild(image)
-  productContainer.appendChild(title)
-  productContainer.appendChild(jacketGender)
-  productContainer.appendChild(jacketPrice)
-  productContainer.appendChild(jacketDescription)
+  productContainer.append(image, title, jacketGender, jacketPrice, jacketDescription)
 }
 
 function chooseSizes(sizesArray) {
@@ -84,8 +78,7 @@ function chooseSizes(sizesArray) {
     const sizeLabel = createElement("span");
     sizeLabel.textContent = size;
 
-    sizeOptionContainer.appendChild(sizeOption);
-    sizeOptionContainer.appendChild(sizeLabel);
+    sizeOptionContainer.append(sizeOption, sizeLabel)
     sizesContainer.appendChild(sizeOptionContainer);
   });
 

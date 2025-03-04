@@ -43,16 +43,13 @@ export function displayJackets(jacketsToDisplay) {
     if (jacket.onSale) {
       const oldPrice = createElementWithClass("p", "old-price");
       oldPrice.textContent = `$${jacket.price}`;
-      priceDiv.appendChild(price);
-      priceDiv.appendChild(oldPrice);
+      priceDiv.append(price, oldPrice);
     } else {
       priceDiv.appendChild(price)
     }
 
-    textDiv.appendChild(name);
-    textDiv.appendChild(priceDiv);
-    card.appendChild(imgDiv);
-    card.appendChild(textDiv);
+    textDiv.append(name, priceDiv);
+    card.append(imgDiv, textDiv);
     shopGrid.appendChild(card);
   });
 }

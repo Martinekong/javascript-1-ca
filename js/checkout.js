@@ -56,16 +56,9 @@ async function displayCartItems() {
       plusBtn.classList.add("fa-plus")
       plusBtn.addEventListener("click", () => adjustQuantity(itemId, 1, size));
 
-      quantityContainer.appendChild(minusBtn);
-      quantityContainer.appendChild(quantityDisplay);
-      quantityContainer.appendChild(plusBtn);
-
-      cartDiv.appendChild(imgContainer);
-      cartDiv.appendChild(name);
-      cartDiv.appendChild(sizeText)
-      cartDiv.appendChild(price);
-      cartDiv.appendChild(quantityContainer);
-
+      quantityContainer.append(minusBtn, quantityDisplay, plusBtn)
+      cartDiv.append(imgContainer, name, sizeText, price, quantityContainer)
+      
       cartSummaryContainer.appendChild(cartDiv);
     } catch (error) {
       console.error("Error fetching item:", error);

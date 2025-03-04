@@ -53,8 +53,7 @@ function displaySearchResults(results) {
     const resultTitle = createElement("p");
     resultTitle.textContent = jacket.title.replace(/^Rainy Days\s*/, "");
 
-    resultItem.appendChild(resultImg);
-    resultItem.appendChild(resultTitle);
+    resultItem.append(resultImg, resultTitle);
 
     const resultPrice = createElement("p");
     resultPrice.textContent = `$${jacket.discountedPrice}`;
@@ -63,8 +62,7 @@ function displaySearchResults(results) {
       const resultOldPrice = createElement("p");
       resultOldPrice.classList.add("old-price");
       resultOldPrice.textContent = `$${jacket.price}`;
-      resultItem.appendChild(resultPrice);
-      resultItem.appendChild(resultOldPrice);
+      resultItem.append(resultPrice, resultOldPrice);
     } else {
       resultItem.appendChild(resultPrice)
     }
