@@ -1,3 +1,5 @@
+import { displayOverlayMessage } from "./utils.js";
+
 const menu = document.querySelector(".menu");
 const menuBtn = document.getElementById("menu-btn")
 const menuExitBtn = document.getElementById("menu-exit");
@@ -59,9 +61,9 @@ const footerNewsletterInput = document.getElementById("footer-newsletter-input")
 
 newsletterBtn.addEventListener("click", () => {
   if (footerNewsletterInput.value.includes("@")) {
-    alert("Thank you for subscribing to our newsletter!")
+    displayOverlayMessage("Thank you for subscribing to our newsletter!")
     footerNewsletterInput.value = "";
   } else {
-    alert("Please fill out valid email to subscribe to our newsletter")
+    displayOverlayMessage("Please fill out a valid email!")
   }
 })

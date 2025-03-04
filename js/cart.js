@@ -1,3 +1,5 @@
+import { displayOverlayMessage } from "./utils.js";
+
 function addToCart() {
   const addToCartBtn = document.getElementById("add-to-cart");
 
@@ -12,7 +14,7 @@ function addToCart() {
       const selectedSize = document.querySelector('input[name="size"]:checked');
 
       if (!selectedSize) {
-        alert("Please select a size before adding to cart.");
+        displayOverlayMessage("Please select a size before adding to cart")
         return;
       }
 
@@ -29,14 +31,7 @@ function addToCart() {
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartBadge(cart);
 
-      addToCartBtn.textContent = "item added";
-      addToCartBtn.style.backgroundColor = "var(--secondary-color"
-      addToCartBtn.style.color = "black"
-      setTimeout(() => {
-        addToCartBtn.textContent = "add to cart";
-        addToCartBtn.style.backgroundColor = "var(--primary-color"
-        addToCartBtn.style.color = "white"
-      }, 2000);
+      displayOverlayMessage("Item added to cart")
     });
   }
 }

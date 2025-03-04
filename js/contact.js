@@ -1,5 +1,6 @@
+import { displayOverlayMessage } from "./utils.js";
+
 const submitBtn = document.getElementById("submit-btn");
-const submitMessage = document.getElementById("submit-message")
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -17,15 +18,13 @@ submitBtn.addEventListener("click", (event) => {
     subject.value.trim() &&
     message.value.trim()
   ) {
-    submitMessage.textContent = "Message Submitted!"
-    submitMessage.classList.remove("error")
+    displayOverlayMessage("Message Submitted!")
     firstName.value = "";
     lastName.value = "";
     email.value = "";
     subject.value = "";
     message.value = "";
   } else {
-    submitMessage.textContent = "You need to fill out all fields"
-    submitMessage.classList.add("error")
+    displayOverlayMessage("You need to fill out all fields")
     }
   });

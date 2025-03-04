@@ -53,3 +53,27 @@ export function displayJackets(jacketsToDisplay) {
     shopGrid.appendChild(card);
   });
 }
+
+export function displayOverlayMessage(message) {
+  const overlayBg = createElementWithClass("div", "overlay-bg")
+  const overlay = createElementWithClass("div", "overlay");
+
+  const overlayMessage = document.createElement("p");
+  overlayMessage.textContent = message;
+
+  const closeBtn = createElementWithClass("button", "primary-btn");
+  closeBtn.textContent = "OK";
+
+  closeBtn.addEventListener("click", () => {
+    overlayBg.remove();
+    overlay.remove();
+  });
+
+  overlayBg.addEventListener("click", () => {
+    overlayBg.remove();
+    overlay.remove();
+  })
+
+  overlay.append(overlayMessage, closeBtn)
+  document.body.append(overlayBg, overlay);
+}

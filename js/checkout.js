@@ -1,4 +1,4 @@
-import { createElement, createElementWithClass } from "./utils.js";
+import { createElement, createElementWithClass, displayOverlayMessage } from "./utils.js";
 import { rainydaysApi, loadingSpinner } from "./constants.js";
 
 const cartSummaryContainer = document.getElementById("cart-summary");
@@ -128,10 +128,6 @@ checkoutBtn.addEventListener("click", (event) => {
     country && email && card && expirationDate && cvc) {
     window.location.href = "order-confirmed.html";
   } else {
-    if (!document.querySelector(".error-message")) {
-      const errorMessage = createElementWithClass("p", "error-message")
-      errorMessage.textContent = "You need to fill out all fields"
-      checkoutBtn.appendChild(errorMessage)  
-    }
+    displayOverlayMessage("You need to fill out all fields")
   }
 });
