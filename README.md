@@ -40,14 +40,19 @@ To get a local copy of the project up and running:
 git clone https://github.com/martinekong/javascript-1-ca.git
 ```
 
-2. Open the project in you code editor
+2. Open the project in your code editor
+
+## Deployment
+
+This site is deployed using GitHub pages:  
+🔗 [Rainydays store](https://martinekong.github.io/javascript-1-ca/)
 
 ## Contact
 
 If you have any questions or feedback, feel free to reach out:
 
-- LinkedIn: www.linkedin.com/in/martine-kongsrud
-- Email: martinekongrus@outlook.com
+- [LinkedIn](https://www.linkedin.com/in/martine-kongsrud)
+- Email: [martinekongrus@outlook.com](mailto:martinekongsrud@outlook.com)
 
 ## Acknowledgments
 
