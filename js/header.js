@@ -1,5 +1,6 @@
-import { displayOverlayMessage } from "./utils.js";
+import { displayOverlayMessage, createElementWithClass } from "./utils.js";
 
+// Header
 const menu = document.querySelector(".menu");
 const menuBtn = document.getElementById("menu-btn")
 const menuExitBtn = document.getElementById("menu-exit");
@@ -25,6 +26,8 @@ document.addEventListener("click", (event) => {
   }
 });
 
+
+// Search
 const searchInput = document.getElementById("header-search");
 const searchBtn = document.getElementById("search-btn");
 
@@ -56,6 +59,7 @@ searchInput.addEventListener("keypress", (event) => {
 searchBtn.addEventListener("click", performSearch);
 
 
+// Footer
 const newsletterBtn = document.getElementById("newsletter-btn");
 const footerNewsletterInput = document.getElementById("footer-newsletter-input")
 
@@ -67,3 +71,26 @@ newsletterBtn.addEventListener("click", () => {
     displayOverlayMessage("Please fill out a valid email!")
   }
 })
+
+// Back to top btn
+function showBackToTopBtn() {
+  const topBtn = createElementWithClass("button", "secondary-btn top-btn");
+  topBtn.setAttribute("aria-label", "Back to top");
+  const topIcon = createElementWithClass("i", "fa-solid fa-chevron-up");
+  topBtn.appendChild(topIcon);
+  document.body.appendChild(topBtn);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 1000) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+showBackToTopBtn();
