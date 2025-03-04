@@ -93,6 +93,7 @@
   grid-template-rows: 300px auto;
   border: 1px solid var(--secondary-color);
   padding: .5rem;
+  position: relative;
 }
 
 .card .img {
@@ -165,4 +166,17 @@
   background-color: var(--primary-color);
   color: white;
   padding: 1rem;
+}
+
+/* Sale banner */
+.sale-banner {
+  background-color: rgb(255, 184, 65);
+  color: var(--primary-color);
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: .5rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  z-index: 1;
 }

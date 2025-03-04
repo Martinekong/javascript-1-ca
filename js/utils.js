@@ -44,6 +44,10 @@ export function displayJackets(jacketsToDisplay) {
       const oldPrice = createElementWithClass("p", "old-price");
       oldPrice.textContent = `$${jacket.price}`;
       priceDiv.append(price, oldPrice);
+
+      const saleBanner = createElementWithClass( "p","sale-banner");
+      saleBanner.textContent = "SALE"
+      card.appendChild(saleBanner)
     } else {
       priceDiv.appendChild(price)
     }
